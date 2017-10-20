@@ -11,8 +11,7 @@ import java.io.*;
  *
  * @author Sebastian Galindo, Carnet: 15452
  */
-public class
-MainPF2{
+public class MainLab8{
 
     public static void main(String[] args) {
         Operaciones operacion = new Operaciones();
@@ -153,5 +152,9 @@ MainPF2{
             operacion.lexerGenerator(structure);
 
         }
+
+/* *******************************************************************************************************/
+
+
     }
 }

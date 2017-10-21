@@ -23,6 +23,7 @@ public class CocolStructure {
     private ArrayList<String> charactersContent = new ArrayList<>();
     private ArrayList<String> keywordsContent = new ArrayList<>();
     private ArrayList<String> tokensContent = new ArrayList<>();
+    private ArrayList<String> productionsContent = new ArrayList<>();
 
     public CocolStructure() {
     }
@@ -105,5 +106,13 @@ public class CocolStructure {
 
     public void setTokensContent(ArrayList<String> tokensContent) {
         this.tokensContent = tokensContent;
+    }
+
+    public ArrayList<String> getProductionsContent() {
+        return productionsContent;
+    }
+
+    public void setProductionsContent(ArrayList<String> productionsContent) {
+        this.productionsContent = productionsContent;
     }
 }

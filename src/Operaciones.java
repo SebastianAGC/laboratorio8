@@ -827,6 +827,7 @@ public class Operaciones {
         String end = "";
         String cadena = "";
         String temp = "";
+        int productionsIndex = 0;
 
         //Obteniendo la PRIMERA linea de la estructura de Coco/l
         String start = fileContent.get(0);
@@ -929,6 +930,9 @@ public class Operaciones {
                 }else if(cadena.contains("IGNORE")) {
                     ignoreIndex=j;
                     bandera=true;
+                }else if(cadena.contains("PRODUCTIONS")){
+                    productionsIndex = j;
+                    bandera = true;
                 }else{
                     //añadiendo el contenido de Characters.
                     cadena=cadena.replace(" ", "");
@@ -1096,6 +1100,17 @@ public class Operaciones {
                     error = new ErrorType(20, ignoreLine);
                     return error;
                 }
+            }
+        }
+
+        for(int i=ignoreLine; i<fileContent.size();i++){
+            if(fileContent.get(i).equals("PRODUCTIONS")){
+                productionsIndex=i;
+            }
+        }
+        if(productionsIndex!=0){
+            for(int i=productionsIndex+1;i<fileContent.size();i++){
+                structure.getProductionsContent();
             }
         }
 

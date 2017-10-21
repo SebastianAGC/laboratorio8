@@ -26,7 +26,15 @@ public class ParserOperations {
                             }
                         }
                     }else{
-
+                        if(caracter.equals(pr.getHead())){
+                            if(!this.terminals.contains(caracter)){
+                                this.terminals.add(caracter);
+                            }
+                        }else{
+                            if(!this.nonterminals.contains(caracter)){
+                                this.nonterminals.add(caracter);
+                            }
+                        }
                     }
                 }
             }

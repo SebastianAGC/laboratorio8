@@ -4,6 +4,7 @@ public class Parser {
 
     private ArrayList<String> terminals = new ArrayList<>();
     private ArrayList<String> nonterminals = new ArrayList<>();
+    private ArrayList<String> productionsContent = new ArrayList<>();
 
     public String first(String input){
         String symbols="";
